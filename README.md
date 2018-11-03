@@ -20,3 +20,4 @@ ansible-playbook -i hosts site.yml --ask-pass --ask-sudo-pass
 
 # 補足
 * nginx, php-fpmについて、ansibleのserviceモジュールでの起動が出来なかったためcommandを利用している。
+* [wordpress-debian](https://github.com/t-morisawa/wordpress-debian)はコンテナの中でansible-playbookを実行させていたが、こちらはホストOSからpushする形で構成管理している。
