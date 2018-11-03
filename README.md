@@ -18,6 +18,10 @@ ansible-playbook -i hosts site.yml --ask-pass --ask-sudo-pass
 ホストで http://127.0.0.1:8080/ へアクセス
 ```
 
+ansible-playbook実行時に求められるSSHパスワードは `testuser`
+
+sudoパスワードは初回実行時に設定する。
+
 # 補足
 * nginx, php-fpmについて、ansibleのserviceモジュールでの起動が出来なかったためcommandを利用している。
 * [wordpress-debian](https://github.com/t-morisawa/wordpress-debian)はコンテナの中でansible-playbookを実行させていたが、こちらはホストOSからpushする形で構成管理している。
