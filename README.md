@@ -26,11 +26,16 @@ sudoパスワードは初回実行時に設定する。
 
 ## リモート起動方法
 
-hostsを編集してIPとSSHユーザ名を指定する
+1. hostsを編集してIPとSSHユーザ名を指定する
 ```
 [wordpress-server]
 xxx.xxx.xxx.xxx ansible_ssh_user=foo
 # 127.0.0.1 ansible_ssh_user=testuser ansible_ssh_port=2222
+```
+
+2. 環境構築を行う
+```
+ansible-playbook -i hosts site.yml
 ```
 
 # 補足
