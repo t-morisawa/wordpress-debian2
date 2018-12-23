@@ -38,6 +38,13 @@ xxx.xxx.xxx.xxx ansible_ssh_user=foo
 ansible-playbook -i hosts site.yml
 ```
 
+3. hostsに記載したURLへアクセスする
+```
+http://xxx.xxx.xxx.xxx
+```
+
+WPなり設定画面なりが見えていればOK
+
 # 補足
 * nginx, php-fpmについて、ansibleのserviceモジュールでの起動が出来なかったためcommandを利用している。
 * [wordpress-debian](https://github.com/t-morisawa/wordpress-debian)はコンテナの中でansible-playbookを実行させていたが、こちらはホストOSからpushする形で構成管理している。
