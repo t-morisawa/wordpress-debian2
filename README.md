@@ -45,6 +45,13 @@ http://xxx.xxx.xxx.xxx
 
 WPなり設定画面なりが見えていればOK
 
+### GCPの場合
+
+インスタンスにSSHログインできるようにしておく必要がある。
+https://console.cloud.google.com/compute/metadata/sshKeys
+
+ここで指定したユーザ名が、ansible_ssh_userとなる
+
 # 補足
 * nginx, php-fpmについて、ansibleのserviceモジュールでの起動が出来なかったためcommandを利用している。
 * [wordpress-debian](https://github.com/t-morisawa/wordpress-debian)はコンテナの中でansible-playbookを実行させていたが、こちらはホストOSからpushする形で構成管理している。
