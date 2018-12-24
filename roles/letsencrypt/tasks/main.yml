@@ -5,7 +5,7 @@
   command: service nginx stop
 
 - name: Create letsencrypt certificate
-  shell: letsencrypt certonly -n -m {{ letsencrypt_email }} --agree-tos -d {{ server_hostname }}
+  shell: letsencrypt certonly --standalone -n -m {{ letsencrypt_email }} --agree-tos -d {{ server_hostname }}
   args:
     creates: /etc/letsencrypt/live/{{ server_hostname }}
 
@@ -19,4 +19,4 @@
   cron:
     name: letsencrypt_renewal
     special_time: weekly
-    job: letsencrypt --renew certonly -n -m {{ letsencrypt_email }} --agree-tos -d {{ server_hostname }} && service nginx reload
+    job: letsencrypt --renew certonly --standalone -n -m {{ letsencrypt_email }} --agree-tos -d {{ server_hostname }} && service nginx reload
