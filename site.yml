@@ -8,5 +8,6 @@
     - common
     - mysql
     - nginx
+    - letsencrypt
     - php-fpm
     - wordpress

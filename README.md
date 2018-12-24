@@ -9,8 +9,23 @@
 * debian 9.5
 
 # 使用方法
+## 事前準備
 
-必要に応じてhostsファイルを書き換える必要があります。
+### HTTPS化をしない場合
+
+HTTPS化をしない場合は、site.ymlの `letsencrypt` の行を削除してください。
+
+
+### HTTPS化をする場合
+
+hostsを編集してください。
+証明書生成時に必要なメールアドレスとホスト名を指定する必要があります。
+
+```
+[wordpress-server]
+xxx.xxx.xxx.xxx ansible_ssh_user=foo server_hostname=example.com letsencrypt_email=me@example.com
+```
+
 
 ## ローカル起動方法
 ```
