@@ -44,7 +44,7 @@ sudoパスワードは初回実行時に設定する。
 1. hostsを編集してIPとSSHユーザ名を指定する
 ```
 [wordpress-server]
-xxx.xxx.xxx.xxx ansible_ssh_user=foo
+xxx.xxx.xxx.xxx ansible_ssh_user=foo server_hostname=example.com
 # 127.0.0.1 ansible_ssh_user=testuser ansible_ssh_port=2222
 ```
 
